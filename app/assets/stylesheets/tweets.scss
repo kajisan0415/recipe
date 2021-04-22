@@ -1,0 +1,98 @@
+// Place all the styles related to the Tweets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+main {
+  display: flex;
+}
+
+
+header {
+  background-color: rgb(26, 25, 25);
+  height: 60px;
+  padding-top: 10px;
+  display: flex;
+}
+
+.sidebar {
+  width: 15%;
+  height: 100%;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.main-visual {
+  width: 80%;
+  height: 100%;
+}
+
+.main-visual-content {
+  height: 75%;
+  padding-top: 30px;
+  display: flex;
+}
+
+.main-visual-img {
+  width: 750px;
+  height: 500px;
+  background-color: black;
+  margin-top: 30px;
+  margin-left: 50px;
+  background-size: cover;
+}
+
+.main-visual-text {
+  width: 300px;
+  height: 500px;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.text-title {
+  text-align: center;
+  font-family: monospace;
+}
+
+.article-comment {
+  font-family: serif;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.latest-news {
+  height: 25%;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: monospace;
+}
+
+.latest-news-title {
+  text-align: center;
+  border-bottom: 2px solid #b9b9b9e1;
+}
+
+.news-box {
+  height: 90%;
+  display: flex;
+}
+.news-content {
+  margin-top: 30px;
+  width: 25%;
+  height: 200px;
+  border-right: 2px solid #b9b9b9e1;
+  text-align: center;
+}
+
+.news-content:nth-child(4) {
+  border-right: none;
+}
+
+.news-title {
+  text-align: center;
+}
+
+.news-body {
+  text-align: center;
+  margin-top: 40px;
+  margin: 20px 10px 10px 5px;
+}

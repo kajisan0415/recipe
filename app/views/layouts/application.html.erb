@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recipe</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav-list">
+        <ul class="nav-list-item">
+          <%= link_to "Home", root_path %>
+        </ul>
+        <ul class="nav-list-item">
+          <%= link_to "Index", tweets_path %>
+        </ul>
+        <ul class="nav-list-item">
+          <%= link_to "New", new_tweet_path %>
+        </ul>
+      </div>
+    </header>
+    <%= yield %>
+  </body>
+</html>

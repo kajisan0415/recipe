@@ -1,0 +1,29 @@
+<body>
+<main>
+  <p id="notice"><%= notice %></p>
+<%= render 'tweets/sidebar' %>
+
+      <div class="main-visual">
+        <div class="main-visual-content">
+          <div class="main-visual-img"></div>
+          <div class="main-visual-text">
+            <h1 class="text-title">Title</h1>
+            <p class="article-comment">comment</p>
+          </div>
+        </div>
+        <div class="latest-news">
+          <h2 class="latest-news-title">Latest News</h2>
+          <div class="news-box">
+            <% @tweets.each do |tweet| %>
+            <div class="news-content">
+              <h3 class="news-title"><%= tweet.title %></h3>
+              <p class="news-body">
+                <%= tweet.content %>
+              </p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+</main>
+<footer></footer>
+</body>
