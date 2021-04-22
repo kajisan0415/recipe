@@ -35,9 +35,9 @@ header {
 .main-visual-img {
   width: 750px;
   height: 500px;
-  background-color: black;
+  background-image: url(cameron-venti-0YWaDPylkYA-unsplash);
   margin-top: 30px;
-  margin-left: 50px;
+  margin-left: 30px;
   background-size: cover;
 }
 
@@ -51,19 +51,21 @@ header {
 .text-title {
   text-align: center;
   font-family: monospace;
+  height: 40%;
 }
 
 .article-comment {
   font-family: serif;
   text-align: center;
   margin-top: 10px;
+  height: 60%;
 }
 
 .latest-news {
   height: 25%;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 30px 20px 0 20px;
   font-family: monospace;
+  text-align: center;
 }
 
 .latest-news-title {
@@ -71,16 +73,22 @@ header {
   border-bottom: 2px solid #b9b9b9e1;
 }
 
+.latest-news-container {
+  display: flex;
+}
+
 .news-box {
   height: 90%;
+  width: 100%;
+  text-align: center;
   display: flex;
 }
 .news-content {
   margin-top: 30px;
-  width: 25%;
   height: 200px;
   border-right: 2px solid #b9b9b9e1;
   text-align: center;
+  width: 25%;
 }
 
 .news-content:nth-child(4) {
@@ -95,4 +103,9 @@ header {
   text-align: center;
   margin-top: 40px;
   margin: 20px 10px 10px 5px;
+}
+
+.pagination {
+  margin-top: 20px;
+  text-decoration: none;
 }

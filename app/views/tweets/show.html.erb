@@ -1,20 +1,39 @@
-<p id="notice"><%= notice %></p>
+<body>
+  <main>
+    
+      <%= render 'tweets/sidebar' %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @tweet.title %>
-</p>
+        <div class="main-visual">
+          <p id="notice"><%= notice %></p>
+          <div class="main-visual-content">
+            <div class="main-visual-img"><%= attachment_image_tag @tweet, :image,:fill, 750, 500 %></div>
+            <div class="main-visual-text">
+              <h1 class="text-title"><%= @tweet.title %></h1>
+              <p class="article-comment"><%= @tweet.content %></p>
+            </div>
+          </div>
 
-<p>
-  <strong>Content:</strong>
-  <%= @tweet.content %>
-</p>
+          <div class="latest-news">
+            <h2 class="latest-news-title">Latest News</h2>
+              <div class="latest-news-container">
+                <div class="news-box">
+                  <% @tweets.each do |tweet| %>
+                    <div class="news-content">
+                      <h3 class="news-title"><%= tweet.title %></h3>
+                      <p class="news-body">
+                        <%= tweet.content %>
+                      </p>
+                      <%= link_to "Show", tweet_path(tweet.id) %>
+                      <%= link_to 'Edit', edit_tweet_path(tweet) %>
+                      <%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            <%= paginate @tweets %>
+          </div>
 
-<p>
-  <strong>Image:</strong>
-  <%= @tweet.image_id %>
-</p>
-
-<%= link_to 'Edit', edit_tweet_path(@tweet) %> |
-<%= link_to 'Back', tweets_path %>
-<%= link_to 'Destroy', @tweet, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+  </main>
+  <footer></footer>
+</body>
