@@ -11,16 +11,16 @@
 
   <body>
     <header>
+      <div class="nav-title-container">
+          <%= link_to "Telescope", root_path,class:"nav-title" %>
+      </div>
       <nav class="nav-list">
-        <ul class="nav-list-item">
-          <%= link_to "Top", root_path,class:"fas fa-home" %>
-        </ul>
-        <ul class="nav-list-item">
-          <%= link_to "Index", tweets_path,class:"fas fa-book" %>
-        </ul>
-        <ul class="nav-list-item">
-          <%= link_to "New", new_tweet_path,class:"fas fa-plus" %>
-        </ul>
+          <ul class="nav-list-item">
+            <%= link_to "Index", tweets_path,class:"fas fa-book" %>
+          </ul>
+          <ul class="nav-list-item">
+            <%= link_to "New", new_tweet_path,class:"fas fa-plus" %>
+          </ul>
       </div>
     </header>
     <%= yield %>

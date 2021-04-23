@@ -7,7 +7,7 @@
         <div class="main-visual-content">
           <div class="main-visual-img"></div>
           <div class="main-visual-text">
-            <h1 class="text-title">Title</h1>
+            <h1 class="text-title">Welcome！！</h1>
             <p class="article-comment">comment</p>
           </div>
         </div>
@@ -18,13 +18,14 @@
               <div class="news-box">
                 <% @tweets.each do |tweet| %>
                   <div class="news-content">
-                    <h3 class="news-title"><%= tweet.title %></h3>
+                    <h3 class="news-title">
+                      <%= link_to tweet_path(tweet.id) do %>
+                      <%= tweet.title %>
+                      <% end %>
+                      </h3>
                     <p class="news-body">
                       <%= tweet.content %>
                     </p>
-                    <%= link_to "Show", tweet_path(tweet.id) %>
-                    <%= link_to 'Edit', edit_tweet_path(tweet) %>
-                    <%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %>
                   </div>
                 <% end %>
               </div>

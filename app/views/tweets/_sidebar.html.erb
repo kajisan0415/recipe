@@ -1,5 +1,16 @@
 <div class="sidebar">
-  <div class="date">
+  <div class="sidebar-photos">
+    <h3 class="sidebar-photos-title">Photos</h3>
+    <div class="sidebar-photos-container">
+      <% @sidebar.each do |tweet| %>
+        <%= link_to tweet_path(tweet.id) do %>
+        <%= attachment_image_tag tweet, :image,:fill, 70, 70 %>
+        <% end %>
+      <% end %>
+    </div>
+    <%= paginate @sidebar,class:"sidebar-pagenate" %>
+  </div>
+    <div class="date">
     <h3 class="date-title">Date</h3>
     <div class="date-list">
       <div class="date-list-item">
@@ -10,12 +21,6 @@
         <h4 class="sidebar-title">2000</h4>
         <p class="sidebar-body"></p>
       </div>
-    </div>
-  </div>
-  <div class="profile">
-    <h3 class="profile-title">Profile</h3>
-    <div class="profile-body">
-      <p class="sidebar-body"></p>
     </div>
   </div>
   <div class="explore">
@@ -30,11 +35,11 @@
     <h3 class="sns-title">SNS</h3>
     <p class="sns-text">FOLLOW ME</p>
     <div class="sns-icons">
-      <i class="fab fa-twitter-square"></i>
-      <i class="fab fa-instagram-square"></i>
-      <i class="fab fa-facebook-square"></i>
-      <i class="fab fa-youtube"></i>
-      <i class="fab fa-snapchat-square"></i>
+      <%= link_to "","https://twitter.com",class:"fab fa-twitter-square" %>
+      <%= link_to "","https://www.instagram.com",class:"fab fa-instagram-square" %>
+      <%= link_to "","https://ja-jp.facebook.com",class:"fab fa-facebook-square" %>
+      <%= link_to "","https://www.youtube.com",class:"fab fa-youtube" %>
+      <%= link_to "","https://www.snapchat.com/",class:"fab fa-snapchat-square" %>
     </div>
   </div>
 </div>
