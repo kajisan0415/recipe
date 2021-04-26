@@ -11,16 +11,22 @@
 
   <body>
     <header>
+
       <div class="nav-title-container">
           <%= link_to "Telescope", root_path,class:"nav-title" %>
       </div>
       <nav class="nav-list">
+        <% if user_signed_in? %>
           <ul class="nav-list-item">
             <%= link_to "Index", tweets_path,class:"fas fa-book" %>
           </ul>
           <ul class="nav-list-item">
             <%= link_to "New", new_tweet_path,class:"fas fa-plus" %>
           </ul>
+          <ul class="nav-list-item">
+            <%= link_to "Logout", destroy_user_session_path, method: :delete,class:"fas fa-sign-out-alt" %>
+          </ul>
+        <% end %>
       </div>
     </header>
     <%= yield %>
