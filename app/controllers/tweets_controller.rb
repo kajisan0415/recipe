@@ -5,14 +5,12 @@ class TweetsController < ApplicationController
   def index
     @tweets = Tweet.page(params[:page]).per(4).order("id DESC")
     @sidebar = Tweet.page(params[:page]).per(9).order("id DESC")
-    @user = current_user
   end
 
   # GET /tweets/1 or /tweets/1.json
   def show
     @tweets = Tweet.page(params[:page]).per(4).order("id DESC")
     @sidebar = Tweet.page(params[:page]).per(9).order("id DESC")
-    @user = current_user
   end
 
   # GET /tweets/new

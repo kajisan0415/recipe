@@ -17,6 +17,8 @@ header {
 .sidebar-photos {
   width: 100%;
   height: 30%;
+  border-top: 2px solid #b9b9b9e1;
+  border-bottom: 2px solid #b9b9b9e1;
 }
 
 .sidebar-title {
@@ -28,8 +30,6 @@ header {
   flex-wrap: wrap;
   width: 100%;
   height: 220px;
-  border-top: 2px solid #b9b9b9e1;
-  border-bottom: 2px solid #b9b9b9e1;
   padding: 5px 0px;
 }
 
